@@ -1,67 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact - Island Brews</title>
-  </head>
-  <body>
-    <h1>Contact Island Brews</h1>
-    <p>Planning an event? Let us bring the aloha to you!</p>
+    <title>Contact – Da Kine Grindz by Imi</title>
+    <meta name="description" content="Contact Da Kine Grindz by Imi with questions, feedback, or catering inquiries using our simple contact form.">
+    <link rel="stylesheet" href="styles.css">
+</head>
 
-    <form>
-      <!-- PART 1: Contact Information Fieldset -->
-      <fieldset>
-        <legend>Contact Information</legend>
+<body>
 
-        <!-- Name Input -->
-        <label for="name">Your Name:</label>
-        <input type="text" id="name" name="name" required>
+<header>
+    <h1>Da Kine Grindz by Imi</h1>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+</header>
 
-        <br><br>
+<main>
 
-        <!-- Email Input -->
-        <label for="email">Email Address:</label>
-        <input type="email" id="email" name="email" required>
-      </fieldset>
+    <section>
+        <h2>Contact Us</h2>
+        <p>If you have questions or want to reach out, fill out the form below.</p>
+    </section>
 
-      <br>
+    <section>
+        <form>
 
-      <!-- PART 2: Event Type Dropdown -->
-      <label for="event-type">Event Type:</label>
-      <select id="event-type" name="event-type">
-        <option value="">Choose event type</option>
-        <option value="corporate">Corporate Meeting</option>
-        <option value="wedding">Wedding</option>
-        <option value="birthday">Birthday Party</option>
-        <option value="other">Other</option>
-      </select>
+            <fieldset>
+                <legend>Your Information</legend>
 
-      <br><br>
+                <label for="name">Name *</label>
+                <input type="text" id="name" name="name" required>
 
-      <!-- PART 2: Event Date -->
-      <label for="event-date">Event Date:</label>
-      <input type="date" id="event-date" name="event-date" required>
+                <label for="email">Email *</label>
+                <input type="email" id="email" name="email" required>
 
-      <br><br>
+                <label for="message">Message *</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
 
-      <!-- PART 2: Additional Details -->
-      <label for="details">Additional Details:</label>
-      <br>
-      <textarea id="details" name="details" rows="5" cols="40"></textarea>
+                <label for="reason">Reason for Contact</label>
+                <select id="reason" name="reason">
+                    <option value="">Choose one</option>
+                    <option value="catering">Catering Inquiry</option>
+                    <option value="feedback">Feedback</option>
+                    <option value="general">General Question</option>
+                </select>
+            </fieldset>
 
-      <br><br>
+            <p><em>Your information will only be used to respond to your message.</em></p>
 
-      <!-- PART 3: Newsletter Checkbox -->
-      <input type="checkbox" id="newsletter" name="newsletter">
-      <label for="newsletter">Send me the Island Brews newsletter</label>
+            <button type="submit" class="btn">Send Message</button>
+        </form>
+    </section>
 
-      <br><br>
+</main>
 
-      <p><em>We'll respond within 2 business days.</em></p>
+<footer>
+    <p>© 2026 Da Kine Grindz by Imi</p>
+</footer>
 
-      <!-- PART 3: Submit Button -->
-      <button type="submit">Submit Inquiry</button>
-    </form>
-  </body>
+</body>
 </html>
