@@ -1,136 +1,106 @@
 /* ============================================================
-   Color Scheme for this site:
-   Primary: #2563eb (blue)
-   Primary Hover: #1d4ed8 (darker blue)
-   Text: #1f2937 (dark gray)
-   Text Muted: #6b7280 (lighter gray)
-   Background: #ffffff (white)
-   Border: #e5e7eb (light gray)
+   RESTAURANT THEME — Warm Beige & White
    ============================================================ */
 
+:root {
+    --primary: #8b5e3c;
+    --primary-hover: #6f472d;
+    --secondary: #c8a27a;
 
-/* ===================
-   Reset & Base
-   =================== */
-* {
-    box-sizing: border-box;
+    --bg: #fdfaf6;
+    --surface: #ffffff;
+    --beige: #f5eee6;
+
+    --text: #2d2a26;
+    --text-muted: #7a736d;
+    --border: #e8dfd6;
+
+    --radius: 10px;
+    --transition: all 0.25s ease;
+    --shadow: 0 6px 18px rgba(0,0,0,0.06);
 }
 
+/* ===================
+   Base
+   =================== */
 body {
     margin: 0;
-    font-family: "Inter", Arial, sans-serif;
-    font-size: 16px;
-    line-height: 1.6;
-    color: #1f2937;
-    background-color: #ffffff;
+    font-family: "Georgia", "Inter", serif;
+    color: var(--text);
+    background: var(--bg);
+    line-height: 1.7;
 }
 
 /* ===================
    Typography
    =================== */
 h1, h2, h3, h4 {
-    line-height: 1.2;
+    font-family: "Georgia", serif;
+    color: var(--primary);
     margin-top: 0;
-    color: #1f2937;
 }
 
-h1 { font-size: 2.5rem; }
-h2 { font-size: 2rem; }
-h3 { font-size: 1.5rem; }
-h4 { font-size: 1.25rem; }
-
 p {
-    margin-bottom: 1rem;
+    color: var(--text-muted);
 }
 
 a {
-    color: #2563eb;
+    color: var(--primary);
     text-decoration: none;
-    font-weight: 500;
 }
 
 a:hover {
-    color: #1d4ed8;
-    text-decoration: underline;
+    color: var(--primary-hover);
 }
 
 /* ===================
-   Layout
+   Header
    =================== */
 header {
-    padding: 20px;
-    border-bottom: 1px solid #e5e7eb;
-    background-color: #ffffff;
-}
+    background: var(--surface);
+    border-bottom: 1px solid var(--border);
+    padding: 20px 30px;
 
-main {
-    padding: 40px 20px;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-section {
-    margin-bottom: 60px;
-}
-
-footer {
-    padding: 20px;
-    border-top: 1px solid #e5e7eb;
-    text-align: center;
-    color: #6b7280;
-    background-color: #ffffff;
-}
-
-/* ===================
-   Navigation
-   =================== */
-nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
+/* ===================
+   Navigation
+   =================== */
 nav ul {
+    display: flex;
+    gap: 25px;
     list-style: none;
     padding: 0;
     margin: 0;
 }
 
-nav li {
-    display: inline-block;
-    margin-right: 20px;
-}
-
-nav li:last-child {
-    margin-right: 0;
-}
-
 nav a {
-    color: #1f2937;
     font-weight: 600;
+    color: var(--text);
 }
 
 nav a:hover {
-    color: #2563eb;
+    color: var(--primary);
 }
 
 /* ===================
    Hero Section
    =================== */
 .hero {
-    padding: 80px 20px;
+    background: var(--beige);
+    padding: 100px 20px;
     text-align: center;
-    background-color: #f9fafb;
-    border-bottom: 1px solid #e5e7eb;
 }
 
 .hero h1 {
-    margin-bottom: 20px;
+    font-size: 3rem;
 }
 
 .hero p {
-    color: #6b7280;
-    max-width: 700px;
+    max-width: 600px;
     margin: 0 auto;
 }
 
@@ -139,35 +109,80 @@ nav a:hover {
    =================== */
 .btn {
     display: inline-block;
-    padding: 12px 24px;
-    background-color: #2563eb;
+    background: var(--primary);
     color: white;
-    border-radius: 6px;
-    font-weight: 600;
+    padding: 14px 28px;
+    border-radius: var(--radius);
+    font-weight: bold;
+    transition: var(--transition);
 }
 
 .btn:hover {
-    background-color: #1d4ed8;
+    background: var(--primary-hover);
 }
 
 /* ===================
-   Cards / Components
+   Sections
+   =================== */
+section {
+    padding: 60px 20px;
+}
+
+.section-beige {
+    background: var(--beige);
+}
+
+/* ===================
+   Cards (Menu Items)
    =================== */
 .card {
-    border: 1px solid #e5e7eb;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
     padding: 20px;
-    border-radius: 8px;
-    background-color: #ffffff;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+}
+
+.card:hover {
+    transform: translateY(-4px);
 }
 
 .card h3 {
-    margin-top: 0;
+    color: var(--primary);
 }
 
-.card img {
-    width: 100%;
-    border-radius: 6px;
-    margin-bottom: 15px;
+.card p {
+    font-size: 0.95rem;
+}
+
+/* ===================
+   Menu Grid
+   =================== */
+.menu-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+}
+
+.menu-card {
+    flex: 1 1 250px;
+}
+
+/* ===================
+   Gallery
+   =================== */
+.gallery-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.gallery-container img {
+    width: 280px;
+    border-radius: var(--radius);
+    border: 1px solid var(--border);
 }
 
 /* ===================
@@ -176,20 +191,23 @@ nav a:hover {
 input, textarea {
     width: 100%;
     padding: 12px;
-    border: 1px solid #e5e7eb;
-    border-radius: 6px;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
     margin-bottom: 15px;
-    font-size: 1rem;
 }
 
 input:focus, textarea:focus {
     outline: none;
-    border-color: #2563eb;
+    border-color: var(--primary);
 }
 
 /* ===================
-   Utility Classes
+   Footer
    =================== */
-.text-center { text-align: center; }
-.mt-20 { margin-top: 20px; }
-.mb-20 { margin-bottom: 20px; }
+footer {
+    background: var(--surface);
+    border-top: 1px solid var(--border);
+    text-align: center;
+    padding: 30px;
+    color: var(--text-muted);
+}
